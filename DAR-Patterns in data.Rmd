@@ -1,0 +1,69 @@
+---
+title: "Who does more pushups"
+author: "Makayla Anderson"
+date: "09/26/2016"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r include=FALSE}
+require(knitr)
+require(mosaic)
+require(tigerstats)
+```
+
+# Introduction
+
+Several years ago some MAT 111 students who were on the football team conducted a study of their team-mates.  The results are contained in the data frame `pushups` in the `tigerstats` package.
+
+```{r eval=FALSE}
+data(pushups)
+View(pushups)
+help(pushups)
+```
+
+Among other things, the students recorded the type of position a player had on the team (either line or skill), and also the number of push-ups each player could perform in a two-minute period.
+
+Line players are on the offensive or defensive line.  They need to be a certain kind of speed, but they must also be quite big and strong.  Skill players do a lot of running and catching:  they are the quarterback, running backs, receivers, etc.
+
+Our Research Question is:
+
+  >Who does more push ups, on average: a line player or a skill player?
+
+
+# Methods
+
+We will look at a pair of box plots that shows push ups for both skill and line players to see if there is any apparent differences.
+
+<Perform a variable analysis, and based on that analysis choose at least one appropriate graphical method and one appropriate numerical method to address the research question.>
+
+# Results
+
+<You have both graphical and numerical methods, so you will have both graphical and numerical results to consider.>
+
+## Graphical Results
+```{r}
+bwplot(pushups~position,
+       data=pushups,
+ xlab="Positions",
+ main="Comparing number of pushups between Positions")
+```
+
+
+
+
+<Your graph should have a good title, and axes should be labeled as needed.  Discuss your graphical results, showing how they answer the research question.  Use specific features of the graph in your discussion.>
+
+A skill player does more push ups on average because the box plot shows that there are outliers exceeding 100 and the average was about 55 while the line players average was about 17 with no outliers.
+
+## Numerical Results
+
+
+From looking at the numerical output, I can see that the skill players completed more push ups in a two-minute period the most push ups completed by a skill player was an outlier of 108. The line players had lower scores with the lowest being 6.
+
+# Discussion and Conclusion
+
+<State your overall conclusion.  This is also a good place to mention other Research Questions that came to mind as you were carrying out this study.>
+
+My conclusion after carrying out this study was that the skill players completed more push ups on average within 2 minutes. The skill players also had an outlier that was 108 while the line players' highest score was 34.
